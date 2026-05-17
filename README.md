@@ -166,8 +166,8 @@ Website_PostSpace/
     └── register.html
 ```
 ####  Страница общения `Визуализация Dashboard`
-![Dashboard](../SchoolProject/Photo/Dashboard.png)
+![Dashboard](Photo/Dashboard.png)
 ####  Страница регистрации `Визуализация Register`
-![Register](../SchoolProject/Photo/Register.png)
+![Register](Photo/Register.png)
 ####  Страница входа `Визуализация Login`
-![Login](../SchoolProject/Photo/Login.png)
+![Login](Photo/Login.png)
