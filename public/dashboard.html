@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Личный кабинет</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+  <link rel="stylesheet" href="./css/components/Dashboard.css" />
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+
+  <div class="container-main">
+    <header class="dark_theme">
+      <div class="avatar" id="user-avatar"></div>
+      <h1>Добро пожаловать, <span id="user-name"></span>!</h1>
+      <button id="logoutBtn" class="logout">Выйти</button>
+    </header>
+  <main class="container-post" id="post">
+    <div class="posts_levelling">
+      <div id="posts" class="posts_feed"></div>
+    </div>
+    <div class="top-comments-widget" id="topCommentsWidget">
+    <div class="widget-header">
+        <span>🔥 Топ обсуждений</span>
+    </div>
+    <div class="widget-body" id="commentsList">
+        <!-- Сюда JavaScript будет вставлять комментарии -->
+    </div>
+  </div>
+  </main>
+    <footer class="hero" id="hero_footer">
+    <form id="postForm" class="postForm">
+      <textarea id="postContent" placeholder="Сообщение" required class="Content"></textarea>
+      <button type="submit" class="clicksend">Опубликовать</button>
+    </form>
+    </footer>
+  </div>
+  <style>
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+</style>
+  <script src="./css/js/dashboard.js"></script>
+  <script src="./css/js/DashTopComment.js"></script>
+</body>
+</html>

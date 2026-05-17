@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Вход</title>
+  <link rel="stylesheet" href="/css/components/Login.css" />
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="auth-container">
+        <h2>Вход в систему</h2>
+        <form id="loginForm">
+            <div>
+        <div class="input-container" id="error-username">
+            <input type="text" class="input-field" id="username" placeholder=" " required>
+            <label for="name" class="placeholder-label">Имя пользователя</label>
+        </div>
+
+        <div class="input-container" id="error-password">
+            <input type="password" class="input-field" id="password" placeholder=" " required>
+            <label for="phone" class="placeholder-label">Пароль</label>
+        </div>
+    </div>
+    <button type="submit" class="auth-btn">Войти</button>
+        </form>
+        <div class="auth-footer">
+            Нет аккаунта? <a href="/register.html">Зарегистрироваться</a>
+        </div>
+    </div>
+
+  </div>
+  <script src="./css/js/login.js"></script>
+</body>
+</html>

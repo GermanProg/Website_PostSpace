@@ -1,0 +1,345 @@
+@font-face {
+  font-family:Roboto;
+  src: url('/Projects/Roboto_Condensed-Italic.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+background: hsla(226, 58%, 25%, 1);
+
+background: -moz-linear-gradient(0deg, hsla(226, 58%, 25%, 1) 0%, hsla(265, 51%, 35%, 1) 100%);
+
+background: -webkit-linear-gradient(0deg, hsla(226, 58%, 25%, 1) 0%, hsla(265, 51%, 35%, 1) 100%);
+
+background: linear-gradient(0deg, hsla(226, 58%, 25%, 1) 0%, hsla(265, 51%, 35%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1A2B63", endColorstr="#532C88", GradientType=1 );
+overflow-x: hidden;
+overflow-y: hidden;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle at 30% 40%, rgba(70, 20, 120, 0.15), transparent 60%),
+              radial-gradient(circle at 70% 70%, rgba(30, 10, 80, 0.1), transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+body, html {
+height: 100%;
+margin: 0;
+padding: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  /* Полупрозрачный фон */
+  background: rgba(10, 8, 20, 0.4);  
+  padding: 1rem 2rem;
+  gap: 25px;
+  z-index: 1000;           
+   /* эффект стекла */
+  -webkit-backdrop-filter: blur(8px); 
+  backdrop-filter: blur(8px);        /* для Safari */
+  border-bottom: 1px solid rgba(100, 80, 180, 0.2); /* лёгкая подсветка снизу */
+}
+
+.logo {
+  background: linear-gradient(90deg, #70f3ff, #a0cfff, #d090ff);
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(112, 243, 255, 0.3);
+}
+
+.logo {
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 8px rgba(112, 243, 255, 0.3); }
+  to { text-shadow: 0 0 10px rgba(112, 243, 255, 0.7), 0 0 30px rgba(176, 207, 255, 0.4); }
+}
+
+.nav {
+  display: flex;
+  gap: 1.2rem; 
+  align-items: center;
+}
+
+.button{
+  min-width: 100px;
+  min-height: calc(100px / 50px);
+  background: #CCCCFF;
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D397FA", endColorstr="#8364E8", GradientType=1 );
+  padding: 10px 10px 10px;
+  border-radius: 15px;
+  border: none;
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: calc(2rem / 2);
+}
+
+.button:active{
+background: hsla(238, 100%, 71%, 1);
+
+background: -moz-linear-gradient(90deg, hsla(238, 100%, 71%, 1) 0%, hsla(295, 100%, 84%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(238, 100%, 71%, 1) 0%, hsla(295, 100%, 84%, 1) 100%);
+
+background: linear-gradient(90deg, hsla(238, 100%, 71%, 1) 0%, hsla(295, 100%, 84%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#696EFF", endColorstr="#F8ACFF", GradientType=1 );
+transition: background 1s ease;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:active{
+    color: #011F5B;
+}
+
+.feuture-card{
+background: hsla(259, 84%, 78%, 1);
+
+background: -moz-linear-gradient(90deg, hsla(259, 84%, 78%, 1) 0%, hsla(206, 67%, 75%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(259, 84%, 78%, 1) 0%, hsla(206, 67%, 75%, 1) 100%);
+
+background: linear-gradient(90deg, hsla(259, 84%, 78%, 1) 0%, hsla(206, 67%, 75%, 1) 100%) !important;
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B597F6", endColorstr="#96C6EA", GradientType=1 );
+}
+
+.hero .open{
+  background: linear-gradient(to right, #a0cfff, #B2FFFF);
+  font-size: 3.5rem;
+  margin-bottom: 1.2rem;
+  margin-left: 1.5rem;
+  color: transparent;
+  font-weight: 700;
+  -webkit-background-clip: text;
+  background-clip: text;/* начальное состояние */
+  animation: slideUpFade 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+.hero{
+    transform: translateX(200px) translateY(50px);
+}
+
+.hero .post {
+  background: linear-gradient(to right, #a0cfff, #B2FFFF);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: transparent;
+  font-weight: 400;
+  -webkit-background-clip: text;
+  background-clip: text;
+  line-height: 1.5;
+  margin-right: 15px;
+  opacity: 0;
+  animation: slideUpFade 1.5s ease-out 0.2s forwards; /* задержка 0.2s */
+}
+
+@keyframes slideUpFade{
+    from{
+        opacity: 0;
+        transform: translateY(90px);
+    } to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.features {  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin-left: 100px;
+  margin-top: 80px;
+  position: relative;
+  z-index: 1; 
+}
+
+.feuture-card {
+    background: white;
+    text-align: center;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    transition: all 0.4s ease;
+}
+
+.icon{
+    font-size: 1.6rem;
+}
+
+.feuture-card h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.feuture-card p{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.feuture-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 150, 255, 0.25);
+}
+.stars {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle var(--duration, 4s) infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+@media (max-width: 600px) {  /* адаптивность к разным экранам устройств, еще не доделано*/
+    .container {
+      padding: 5rem 1.2rem 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.1rem;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+    }
+
+    .nav-buttons {
+      gap: 0.7rem;
+    }
+
+    .nav-buttons a, .nav-buttons button {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.95rem;
+    }
+
+    .form-box {
+      padding: 1.8rem;
+    }
+
+    .form-box h1 {
+      font-size: 1.9rem;
+    }
+
+    .feuture-card {
+      padding: 1.3rem;
+    }
+
+    .feuture-card h3{
+      font-size: 1.25rem;
+    }
+  }
+
+    @media (min-width: 1400px) {
+    .container {
+      padding: 6rem 2.5rem 2rem;
+    }
+    .hero{
+        transform: translateX(150px) translateY(100px);
+    }
+    .features{
+        margin-left: 100px;
+        max-width: 1000px;
+    }
+    .feuture-card h3{
+        padding-bottom: 5px;
+        font-size: 1.5rem;
+}
+    header{
+        justify-content: center;
+    }
+    .logo{
+        transform: translateX(-510px);
+    }
+    .nav{
+        transform: translateX(100px);
+    }
+    }
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+      padding: 5.5rem 1.5rem 1.8rem;
+    }
+    .hero{
+        transform: translateX(80px) translateY(100px);
+    }
+    .nav{
+        transform: translateX(-180px);
+    }
+    .features{
+        max-width: 800px;
+        margin-left: 20px;
+        transform: translateY(-50px);
+    }
+    .feuture-card h3{
+        font-size: 1.7rem;
+        padding-bottom: 5px;
+    }
+
+    .hero .post {
+      font-size: 1.2rem;
+      word-break: break-word;
+    }
+    .hero .open{
+        word-break: break-all;
+        font-size: 2.5rem;
+    }
+
+    .nav-buttons a, .nav-buttons button {
+      padding: 0.55rem 1.1rem;
+      font-size: 1.1rem;
+    }
+
+    .form-box input,
+    .form-box button {
+      padding: 1rem;
+      font-size: 1.15rem;
+    }
+
+    .feuture-card h3 {
+      font-size: 1.4rem;
+    }
+  }

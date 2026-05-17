@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Регистрация</title>
+  <link rel="stylesheet" href="./css/components/Register.css" />
+</head>
+<body> 
+    <div class="stars" id="stars"></div>
+    <div class="auth-container">
+        <h2>Регистрация</h2>
+        <form id="registerForm">
+            <div>
+        <div class="input-container">
+            <input type="text" class="input-field" id="username" placeholder=" " required>
+            <label for="name" class="placeholder-label">Имя пользователя</label>
+        </div>
+
+        <div class="input-container">
+            <input type="email" class="input-field" id="email" placeholder=" " required>
+            <label for="email" class="placeholder-label">Адрес электронной почты</label>
+        </div>
+
+        <div class="input-container" id="input-error">
+            <input type="password" class="input-field" id="password" placeholder=" " required>
+            <label for="phone" class="placeholder-label">Пароль</label>
+        </div>
+    </div>
+    <button type="submit" class="auth-btn">Создать аккаунт</button>
+    <div class="auth-footer">
+            Уже есть аккаунт? <a href="/login.html">Войти</a>
+        </div> 
+  <script src="./css/js/register.js"></script>
+</body>
+</html>
